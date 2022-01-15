@@ -1,0 +1,52 @@
+@import "utilities"
+
+.movie_app
+  max-width: rem(845)
+  margin: 0 auto
+  font-family: sans-serif
+
+.movie_search_selections
+  grid-area: selections
+.movie_search_results
+  grid-area: results
+
+.movie_search
+  display: grid
+  grid-template-areas: "selections" "results"
+  padding-top: rem(25)
+  margin: 0 rem(25) rem(25)
+  border-top: rem(1) solid #000
+  &_selections
+    display: flex
+    justify-content: space-between
+    width: 100%
+    max-width: rem(595)
+    margin: 0 auto rem(15)
+  &_results_list
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    max-width: rem(595)
+    margin: 0 auto
+    &_item
+      margin-bottom: rem(5)
+      flex: 0 0 48%
+
++min-width(435)
+  .movie_search_results_list_item
+    flex: 0 0 32%
+
++min-width(629)
+  .movie_search_results_list_item
+    margin-bottom: rem(10)
+
++min-width(845)
+  .movie_search_selections
+    display: unset
+    width: auto
+    margin: 0 0 0 rem(20)
+    margin: 0
+  .movie_search
+    grid-template-areas: "results selections"
+    &_results_list
+      margin: 0

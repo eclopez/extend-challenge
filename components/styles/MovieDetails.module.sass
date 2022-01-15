@@ -1,0 +1,29 @@
+@import "../../pages/styles/utilities"
+
+.movie_details
+  padding: 25px
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  animation: fadeIn ease .7s
+  &_poster
+    display: flex
+    justify-content: center
+    margin-bottom: rem(25)
+  &_info
+    &_title
+      +line_size(36, 38)
+    &_vote_average
+      +line-size(20, 32)
+    &_overview
+      +line-size(14, 20)
+
++min-width(680)
+  .movie_details
+    display: flex
+    flex-flow: row no-wrap
+    gap: rem(20)
+    &_poster
+      flex-shrink: 0
+
++fadeIn
